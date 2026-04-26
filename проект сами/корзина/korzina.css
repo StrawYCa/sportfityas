@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #1a2a35d3; /* Темно-синий фон как на фото */
+    --card-bg: rgba(0, 45, 45, 0.853);
+    --orange: #FF5E00;
+    --text-white: #ffffff;
+}
+
+• {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    /* Добавляем паттерн на фон, если есть картинка */
+    background-image: url('back.png'); 
+    height: 100vh;
+    display: flex;
+    background-repeat: repeat;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Шапка */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0b0b0b00;
+    z-index: 10;
+}
+
+.logo img { height: 50px; }
+.icon-btn { background: none; border: none; cursor: pointer; position: relative; }
+#cart-count {
+    position: absolute; top: -5px; right: -5px;
+    background: var(--orange); color: white;
+    border-radius: 50%; padding: 2px 6px; font-size: 12px;
+}
+
+/* Оранжевая полоса */
+.sub-header {
+    background-color: var(--orange);
+    padding: 10px 20px;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.back-arrow {
+    background: none; border: none; color: white; font-size: 20px; cursor: pointer; text-decoration: none;
+}
+
+/* Зона прокрутки (то, о чем мы говорили раньше) */
+.catalog-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Карточка товара */
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.product-image {
+    
+    background: #ffffff00; /* или градиент как на фото */
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    max-width: 90%;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-row {
+    margin-bottom: 150px;
+}
+
+.price {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-name {
+    color: #99aab5;
+    font-size: 13px;
+}
+
+/* Кнопки и количество */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.quantity-selector {
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.qty-btn {
+    background: none; border: none; color: white;
+    padding: 8px 12px; cursor: pointer; font-size: 16px;
+}
+
+.qty-value { padding: 0 5px; }
+
+.buy-button {
+    background-color: var(--orange);
+    border: none;
+    color: white;
+    flex-grow: 1;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.buy-button:active { transform: scale(0.98); }
+
+.bin {
+    width: 50px;
+}
+
+.clear {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(41, 68, 68, 0.668);
+    border: none;
+    color: white;
+    flex-grow: 1;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
