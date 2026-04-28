@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+}
+body {
+    background-image: url('assets/Rectangle67.png');
+    min-height: 100vh;
+    animation: body 120s ease infinite;
+}
+
+@keyframes body {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+    padding-bottom: 70px;
+    background: rgba(245, 158, 11, 0);
+    color: rgb(75, 43, 43);
+}
+.logo {
+    width: 90px;
+    height: 90px;
+    animation: 12s ease infinite;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(1.05) 0%;
+  }
+  25% {
+    transform: scale(1.3) 25%;
+  }
+  50% {
+    transform: scale(1.05) 50%;
+  }
+  75% {
+    transform: scale(1.05) 75%;
+  }
+  100% {
+    transform: scale(1.05) 100%;
+  }
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    flex: 1;
+}
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 45px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 39px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background: #CF5702;
+    transition: 0.1s;
+}
+nav a:hover {
+    background: #e37c32;
+    transform: scale(1.05);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-right: 50px;
+    flex: 1;
+}
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+}
+.left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+.square {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 303 / 338;
+    background: #cf570200;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+
+.square:hover {
+    transform: scale(1.06);
+
+}
+
+.square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполнит всё пространство, слегка обрезав края, если пропорции не совпадут */
+    /* Или используйте object-fit: contain; если важно видеть картинку целиком без обрезки */
+    border-radius: 15px;
+}
+.right {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 32px;
+}
+.rect {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 303 / 82;
+    background: #cf570200;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-image: url();
+    transition: 0.3s;
+}
+
+.rect:hover {
+    transform: scale(1.06);
+}
+
+.rect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполнит всё пространство, слегка обрезав края, если пропорции не совпадут */
+    /* Или используйте object-fit: contain; если важно видеть картинку целиком без обрезки */
+    border-radius: 15px;
+}
+.footer {
+    background: #2222224c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    margin-top: auto;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(16, 80, 80, 0.7) 0%, rgba(29, 122, 122, 0.7) 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 750px;
+    height: 250px;
+    position: relative;
+    color: white;
+}
+.card-img {
+    height: 225px;
+}
+.card-title {
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    font-size: 20px;
+}
+.button {
+    height: 50px;
+}
